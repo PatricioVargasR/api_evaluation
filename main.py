@@ -31,8 +31,7 @@ async def obtener_contactos():
     c.execute('SELECT * FROM contactos')
     response = []
     for row in c:
-        contacto = c(row[0], row[1], row[2])
-        response.append(contacto)
+        response.append(row)
     return response
 
 @app.get("/contactos/{email}")
@@ -41,8 +40,8 @@ async def obtener_contacto(email: str):
     # Consulta el contacto por su email
     co = conn.cursor()
     co.execute('SELECT * FROM contactos WHERE email = ?', (email,))
-    for row in resultado:
-        contacto = row(row[0], row[1], row[2])
+    for row in co:
+        contacto = row
     return contacto
 
 @app.put("/contactos/{email}")
