@@ -26,7 +26,6 @@ async def crear_contacto(contacto: Contacto):
 @app.get("/contactos")
 async def obtener_contactos():
     """Obtiene todos los contactos."""
-    # TODO Consulta todos los contactos de la base de datos y los envia en un JSON
     c = conn.cursor()
     c.execute('SELECT * FROM contactos')
     response = []
