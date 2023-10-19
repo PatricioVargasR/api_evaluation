@@ -35,7 +35,12 @@ async def obtener_contactos():
     c.execute('SELECT * FROM contactos')
     response = []
     for row in c:
-        response.append(row)
+        # Manera antigua
+        #response.append(row)
+
+        # Nueva manera
+        contacto = {"email": row[0], "nombre":row[1], "telefono": row[2]}
+        response.append(contacto)
     return response
 
 @app.get("/contactos/{email}")
