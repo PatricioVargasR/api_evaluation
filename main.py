@@ -12,6 +12,11 @@ class Contacto(BaseModel):
     nombres : str
     telefono : str
 
+
+@app.get("/")
+def princital():
+    return {"Resuelto por: Patricio de Jesús f:"}
+
 # Rutas para las operaciones CRUD
 
 @app.post("/contactos")
