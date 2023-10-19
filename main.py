@@ -73,6 +73,6 @@ async def eliminar_contacto(email: str):
     """Elimina un contacto."""
     print(email)
     connection = conn.cursor()
-    connection.execute(f"DELETE FROM contactos WHERE email = ?", (email,))
+    connection.execute("DELETE FROM contactos WHERE email = ?", (email,))
     conn.commit()
     return {"Borrado con exito"}
