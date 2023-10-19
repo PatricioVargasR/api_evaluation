@@ -6,8 +6,8 @@
 |--|--|--|
 |1.|Utilizar el script contactos.sql para crear una tabla en sqlite3 de nombre contactos.db|Terminado|
 |2.|Corregir el método para insetar un contacto nuevo|Terminado|
-|3.|Corregir el método para mostrar todos los contactos|s/n|
-|4.|Corregir el método para consultar un contacto por email|s/n|
+|3.|Corregir el método para mostrar todos los contactos|Terminado|
+|4.|Corregir el método para consultar un contacto por email|Terminado|
 |5.|Corregir el método para actualizar un contacto basado en su email|Terminado|
 |6.|Corregir el método para borrar un contacto basado en su email|Terminado|
 
