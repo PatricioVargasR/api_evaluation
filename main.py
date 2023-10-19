@@ -2,6 +2,8 @@ from fastapi import FastAPI
 import sqlite3
 from pydantic import BaseModel, EmailStr
 
+## Rama original ya terminada
+
 # Crea la base de datos
 conn = sqlite3.connect("contactos.db")
 
