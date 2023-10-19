@@ -49,8 +49,13 @@ async def obtener_contacto(email: str):
     # Consulta el contacto por su email
     co = conn.cursor()
     co.execute('SELECT * FROM contactos WHERE email = ?', (email,))
+    contacto = None
     for row in co:
-        contacto = row
+        # Primera forma
+        # contacto = row
+
+        # Nueva forma
+        contacto = {"email": row[0], "nombre":row[1], "telefono": row[2]}
     return contacto
 
 @app.put("/contactos/{email}")
